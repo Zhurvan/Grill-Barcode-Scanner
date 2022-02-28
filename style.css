@@ -1,0 +1,51 @@
+*, html {
+    margin: 0;
+}
+
+body {
+    background-color: #333333;
+    color: #efefef;
+}
+
+#wrapper {
+    text-align: center;
+}
+
+#camWrapper {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+#versionNum {
+    z-index: 2;
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    font-family: sans-serif;
+    font-size: 1.5em;
+}
+
+#manualSearchWrapper {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 10px;
+}
+
+#manualSearch {
+    width: 50%;
+    margin: 0 auto;
+}
+
+#manualInput {
+    font-size: 2.5vh;
+}
+
+.drawingBuffer {
+    width: 0;
+    height: 0;
+}

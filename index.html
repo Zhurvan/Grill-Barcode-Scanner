@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grill Barcode Scanner</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<script src="./quagga/dist/quagga.min.js"></script>
+<p id="versionNum">Grill Scanner v0.4</p>
+<div id="manualSearchWrapper">
+    <form id="manualSearch">
+        <input type="text" id="manualInput" name="search" placeholder="Manual Code Search">
+    </form>
+</div>
+<div id="wrapper">
+    <div id="camWrapper">
+        <div id="camera-stream">
+        </div>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.0/axios.min.js"
+        integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="./script.js"></script>
+</body>
+</html>
