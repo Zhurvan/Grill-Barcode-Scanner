@@ -1,5 +1,6 @@
 let lastCode = "0";
 let codes = {};
+let submitButton = document.getElementById('submitLink');
 
 Quagga.init({
     inputStream: {
@@ -14,7 +15,7 @@ Quagga.init({
     },
     frequency: 1.5,
     decoder: {
-        readers: ["upc_reader"]
+        readers: ["upc_reader", "upc_e_reader"]
     }
 }, function (err) {
     if (err) {
@@ -37,18 +38,11 @@ Quagga.onDetected((data) => {
     }
 });
 
-document.getElementById("manualSearch").addEventListener("submit", function(e){
-    e.preventDefault();
-    let inputBox = document.getElementById("manualInput");
-    readCode(inputBox.value);
-    inputBox.value = "";
-});
-
 function readCode(code) {
     axios.get("https://grill-barcode-default-rtdb.firebaseio.com/codes.json").then(res => {
         console.log(res.data);
-        if (res.data.codes[code]) {
-            alert(`Name: ${res.data.codes[code].name} \nPrice: ${res.data.codes[code].price} \nCode: ${code}`);
+        if (res.data[code]) {
+            alert(`Name: ${res.data[code].name} \nPrice: ${res.data[code].price} \nCode: ${code}`);
             codes[code] = {};
             codes[code].timestamp = Math.floor(Date.now() / 1000);
         } else {
@@ -57,4 +51,6 @@ function readCode(code) {
             codes[code].timestamp = Math.floor(Date.now() / 1000);
         }
     });
+    submitButton.setAttribute('href', `https://docs.google.com/forms/d/e/1FAIpQLSdJlXyxbxVLk8zwOkQ3oi67T2KsEHCGXPKeTEt7LBVqiwOelg/viewform?usp=pp_url&entry.1172952014=${code}`);
+    submitButton.target = "_blank";
 }

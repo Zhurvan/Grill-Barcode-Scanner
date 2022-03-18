@@ -1,0 +1,33 @@
+body {
+    background-color: #333333;
+    color: #efefef;
+}
+
+.sidenav {
+    background-color: #242424;
+}
+
+.sidenav .menuItem {
+    color: #efefef;
+}
+
+.sidenav .menuItem:hover {
+    color: #efefef;
+}
+
+.sidenav a {
+    color: #efefef;
+}
+
+#closeBtn {
+    color: #818181;
+}
+
+.resultItem {
+    border: 1px solid #efefef;
+    background-color: #242424;
+}
+
+.resultItem hr {
+    border: 1px solid #d5d5d5;
+}

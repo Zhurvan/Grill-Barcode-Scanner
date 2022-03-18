@@ -1,0 +1,4 @@
+:root {
+    --dark-mode-toggle-light-icon: url('../assets/moon-stars-fill.svg');
+    --dark-mode-toggle-dark-icon: url('../assets/sun.svg');
+}

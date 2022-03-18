@@ -1,0 +1,142 @@
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css");
+
+.sidenav {
+    height: 100vh;
+    transform: translate(-265px);
+    width: 250px;
+    max-width: 900px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #242424;
+    transition: 0.3s;
+    padding-top: 60px;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.sidenav a {
+    text-decoration: none;
+    font-size: 25px;
+    color: #efefef;
+    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sidenav a:hover {
+    color: #4276d3;
+}
+
+.sidenav .menuItem {
+    color: #818181;
+    transition: 0.3s;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#themeSwitch:hover {
+    color: #4276d3;
+}
+
+.sidenav .menuItemText {
+    transition: 0.3s;
+}
+
+.sidenav .menuItemText:hover {
+    color: #4276d3;
+}
+
+.sidenav p {
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+#closeBtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+    user-select: none;
+}
+
+#closeBtn:hover {
+    color: #cb5454;
+}
+
+#menuBtn {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    font-size: 3vw;
+    cursor: pointer;
+    user-select: none;
+    transition: 0.3s;
+}
+
+#menuBtn:hover {
+    color: #4276d3;
+}
+
+#versionNum {
+    position: absolute;
+    font-size: 1vh;
+    bottom: .5%;
+    left: .25%;
+    transform: translate(-270px);
+    cursor: auto;
+    transition: 0.3s;
+    z-index: 2;
+    text-align: left;
+}
+
+#sidenavContent {
+    text-align: center;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: space-between;
+}
+
+#themeSwitch {
+    font-size: 25px;
+}
+
+@media (orientation: portrait) {
+    #menuBtn {
+        font-size: 10vh;
+    }
+
+    .sidenav {
+        transform: translate(-100%);
+        width: 100%;
+    }
+
+    #versionNum {
+        transform: translate(-150%);
+    }
+}
+
+@media (orientation: landscape) {
+    .sidenav {
+        box-shadow: 3px 0 15px rgba(0, 0, 0, 0.2);
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {
+        padding-top: 15px;
+    }
+
+    .sidenav p {
+        font-size: 18px;
+    }
+}
